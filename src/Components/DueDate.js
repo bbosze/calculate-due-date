@@ -34,9 +34,10 @@ class DueDate extends Component {
           value={date}
         />
         <p>
-        ... and the turnaround time is
+          ... and the turnaround time is
         </p>
         <NumericInput
+          className="App-numeric-input"
           strict
           onChange={this.handleNumericInput}
           min={1}
@@ -44,7 +45,7 @@ class DueDate extends Component {
           value={this.state.turnaround}
         />
         <p>
-        HOURS
+          hour(s)
         </p>
         <button onClick={ this.handleClick }>
           Give me the deadline!
@@ -54,7 +55,7 @@ class DueDate extends Component {
         </p>
         {
             resolvedOn
-            ? <p>{resolvedOn.toString()}</p>
+            ? <p className="App-resolved">{resolvedOn.toString()}</p>
             : null
           }
       </div>
